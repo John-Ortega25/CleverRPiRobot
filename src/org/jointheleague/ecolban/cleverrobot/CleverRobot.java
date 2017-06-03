@@ -32,10 +32,8 @@ public class CleverRobot extends IRobotAdapter {
 	}
 	
 	private boolean loop() throws Exception{
-		System.out.println("LEFT SONAR: " + sonar.readSonar("left"));
-		Thread.sleep(1000);
-		System.out.println("RIGHT SONAR: " + sonar.readSonar("right"));
-		System.out.println("CENTER SONAR: " + sonar.readSonar("center"));
+		readSensors(100);
+		isLightBump();
 		
 		return true;
 	}
